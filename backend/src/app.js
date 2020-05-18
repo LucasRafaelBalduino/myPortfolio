@@ -1,5 +1,6 @@
 import express from 'express';
 import mongosse from 'mongoose';
+import cors from 'cors';
 import routes from './routes';
 
 class App {
@@ -11,8 +12,9 @@ class App {
   }
 
   middlewares() {
+    this.server.use(cors());
     this.server.use(express.json());
-    mongosse.connect('mongodb+srv://admin:PALADINO1994@cluster0-njglh.mongodb.net/test?retryWrites=true&w=majority',
+    mongosse.connect('add mongodb api',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
