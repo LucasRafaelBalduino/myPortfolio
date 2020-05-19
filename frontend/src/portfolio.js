@@ -65,12 +65,6 @@ https://fontawesome.com/icons?d=gallery */
   ],
 };
 
-const openSource = {
-  githubConvertedToken: '3ae5d6c3f1a76c798cfd75cd9810fcfe70c5e76b',
-  githubUserName: 'LucasRafaelBalduino',
-  showGithubProfile: 'true', // Set true or false to show Contact profile using Github, defaults to false
-};
-
 const contactInfo = {
   title: emoji('Contact Me ☎️'),
   subtitle: 'Discuss a project or just want to say hi my inbox is open for all',
@@ -78,4 +72,4 @@ const contactInfo = {
   email_address: 'lucasrafaelbalduino@gmail.com',
 };
 
-export { greeting, socialMediaLinks, skillsSection, openSource, contactInfo };
+export { greeting, socialMediaLinks, skillsSection, contactInfo };
