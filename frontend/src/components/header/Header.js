@@ -22,10 +22,7 @@ function header() {
               <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#projects">Projetos</a>
-            </li>
-            <li>
-              <a href="#opensource">Open Source</a>
+              <a href="#opensource">Projetos</a>
             </li>
             <li>
               <a href="#contact">Contato</a>

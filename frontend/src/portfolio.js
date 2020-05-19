@@ -6,7 +6,8 @@ const greeting = {
   subTitle: emoji(
     'Desenvolvedor de software Jr🚀| Com experiência em criar aplicativos Web com javaScript / Reactjs / Nodejs '
   ),
-  resumeLink: '',
+  resumeLink:
+    'https://drive.google.com/file/d/1BBikkgiW57fxxAwrJiyH7nzu8V9arVWC/view?usp=sharing',
 };
 
 // Your Social Media Link
@@ -66,9 +67,11 @@ https://fontawesome.com/icons?d=gallery */
 };
 
 const contactInfo = {
-  title: emoji('Contact Me ☎️'),
-  subtitle: 'Discuss a project or just want to say hi my inbox is open for all',
-  number: '+92-3243454077',
+  title: emoji('Contato ☎️'),
+  subtitle:
+    'Discutir um projeto ou apenas dizer oi, minha caixa de entrada está aberta para todos.',
+  opportunities: 'Aberto a oportunidades: Sim',
+  number: '+55(41)9 9562-0788',
   email_address: 'lucasrafaelbalduino@gmail.com',
 };
 

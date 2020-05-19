@@ -1,6 +1,5 @@
 import React from 'react';
 import { Fade } from 'react-reveal';
-import emoji from 'react-easy-emoji';
 
 import Button from '../../components/button/Button';
 import SocialMedia from '../../components/socialMedia/SocialMedia';
