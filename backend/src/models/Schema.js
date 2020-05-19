@@ -6,6 +6,14 @@ const ProjectSchema = new mongoose.Schema({
   link: String,
   description: String,
   stack: [String],
+}, {
+  toJSON: {
+    virtuals: true,
+  },
+});
+
+ProjectSchema.virtual('image_url').get(function () {
+  return `http://localhost:3333/files/${this.image}`;
 });
 
 export default mongoose.model('Project', ProjectSchema);

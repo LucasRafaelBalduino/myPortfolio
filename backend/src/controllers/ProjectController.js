@@ -20,7 +20,16 @@ export default {
   },
 
   async update(req, res) {
-    const project = await ProjectSchema.update(req.body);
+    const { id } = req.params;
+    const {
+      name, link, description, stack,
+    } = req.body;
+    const project = await ProjectSchema.findByIdAndUpdate(id, {
+      name,
+      link,
+      description,
+      stack,
+    });
     if (!project) {
       return res.json({ message: 'Projeto nao encontrado' });
     }
