@@ -2,7 +2,12 @@ import express from 'express';
 import mongosse from 'mongoose';
 import cors from 'cors';
 import path from 'path';
+import dotenv from 'dotenv';
 import routes from './routes';
+
+
+dotenv.config();
+const { MONGO_URL } = process.env;
 
 class App {
   constructor() {
@@ -16,7 +21,7 @@ class App {
     this.server.use(cors());
     this.server.use(express.json());
     this.server.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
-    mongosse.connect('sua api',
+    mongosse.connect(MONGO_URL,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

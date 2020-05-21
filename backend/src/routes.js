@@ -1,11 +1,14 @@
 import { Router } from 'express';
 import multer from 'multer';
 
-import uploadConfig from './config/upload';
+// import multerGoogleStorage from 'multer-google-storage';
 import ProjectController from './controllers/ProjectController';
+import uploadConfig from './config/upload';
+
 
 const router = Router();
 const upload = multer(uploadConfig);
+
 
 router.post('/create-project', upload.single('image'), ProjectController.store);
 
