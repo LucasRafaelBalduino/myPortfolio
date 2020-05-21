@@ -16,16 +16,24 @@ export default function GithubRepoCard() {
     }
     loadProject();
   }, []);
+  function openRepoinNewTab(url) {
+    url = `https://github.com/LucasRafaelBalduino/${url}`;
+    const win = window.open(url, '_blank');
+    win.focus();
+  }
   return (
     <>
       <Fade bottom duration={1000} distance="20px">
         <div className="main" id="opensource">
-          <h1 className="project-title">Projetos Open Source</h1>
+          <h1 className="project-title">Projetos</h1>
           <div className="repo-cards-div-main">
             {project.map((projects) => (
               <Fade bottom duration={1000} distance="20px">
                 <div>
-                  <div className="repo-card-div">
+                  <div
+                    className="repo-card-div"
+                    onClick={() => openRepoinNewTab(projects.link)}
+                  >
                     <div className="repo-name-div">
                       <svg
                         aria-hidden="true"
@@ -55,7 +63,7 @@ export default function GithubRepoCard() {
                         <span>
                           <div
                             className="language-color"
-                            style={{ backgroundColor: projects.stack.color }}
+                            style={{ backgroundColor: projects.stack }}
                           />
                           <p>{projects.stack}</p>
                         </span>
